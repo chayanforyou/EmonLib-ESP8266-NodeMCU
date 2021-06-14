@@ -1,0 +1,28 @@
+{
+  "name": "EmonLib-ESP8266",
+  "keywords": "electricity, energy, monitoring",
+  "description": "Energy Monitoring Library",
+  "version": "1.0.0",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/chayanforyou/EmonLib-ESP8266-NodeMCU.git"
+  },
+  "frameworks": "arduino",
+  "platforms": ["atmelavr", "atmelmegaavr", "atmelsam", "espressif8266", "espressif32"],
+  "authors" :
+  [
+     {
+       "name":"Chayan Mistry",
+       "email":"chayanforyou@yahoo.com"
+     },
+     {
+       "name":"Pallob Gain",
+       "email":"pallob01825048064@gmail.com"
+     },
+     {
+       "name":"Antor Ahmed",
+       "email":"antor.mee@gmail.com"
+     }
+  ]
+}
