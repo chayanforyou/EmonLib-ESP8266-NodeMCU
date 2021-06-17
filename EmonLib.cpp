@@ -82,7 +82,9 @@ void EnergyMonitor::calcVI(unsigned int crossings, unsigned int timeout)
 
   while (1)                                         //the while loop...
   {
-    ESP.wdtFeed();                                  //RESET WATCHDOG! Prevents problems with ESP8266 Arduino boards.
+    #if defined(ESP8266) || defined(ARDUINO_ESP8266_NODEMCU)
+      ESP.wdtFeed();                                //RESET WATCHDOG! Prevents problems with ESP8266 Arduino boards.
+    #endif
     startV = analogRead(inPinV);                    //using the voltage waveform
     if ((startV < (ADC_COUNTS * 0.55)) && (startV > (ADC_COUNTS * 0.45))) break; //check its within range
     if ((millis() - start) > timeout) break;
@@ -95,7 +97,9 @@ void EnergyMonitor::calcVI(unsigned int crossings, unsigned int timeout)
 
   while ((crossCount < crossings) && ((millis() - start) < timeout))
   {
-    ESP.wdtFeed();                           //RESET WATCHDOG! Prevents problems with ESP8266 Arduino boards.
+    #if defined(ESP8266) || defined(ARDUINO_ESP8266_NODEMCU)
+      ESP.wdtFeed();                                //RESET WATCHDOG! Prevents problems with ESP8266 Arduino boards.
+    #endif
     numberOfSamples++;                       //Count number of times looped.
     lastFilteredV = filteredV;               //Used for delay/phase compensation
 
