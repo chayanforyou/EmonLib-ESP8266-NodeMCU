@@ -7,8 +7,7 @@
       \___|_| |_| |_|\___/|_| |_|______|_|_.__/
       
 
-Arduino Energy Monitoring Library - compatible with Arduino 1.0
-===============================================================
+## Arduino Energy Monitoring Library - Compatible with ESP8266 NodeMCU
 
 Designed for use with emonTx: http://openenergymonitor.org/emon/Modules
 
